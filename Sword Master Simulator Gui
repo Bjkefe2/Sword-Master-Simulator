@@ -1,0 +1,660 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Main1 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Frame1Open = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local Frame1 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local AutoCollectCoins = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
+local AutoSell = Instance.new("TextButton")
+local CollectIslandReward = Instance.new("TextButton")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local AutoArea1Farm = Instance.new("TextButton")
+local TextLabel_8 = Instance.new("TextLabel")
+local AutoArea2Farm = Instance.new("TextButton")
+local TextLabel_9 = Instance.new("TextLabel")
+local AutoArea3Farm = Instance.new("TextButton")
+local TextLabel_10 = Instance.new("TextLabel")
+local AutoArea4Farm = Instance.new("TextButton")
+local TextLabel_11 = Instance.new("TextLabel")
+local AutoArea5Farm = Instance.new("TextButton")
+local TextLabel_12 = Instance.new("TextLabel")
+local AutoArea6Farm = Instance.new("TextButton")
+local TextLabel_13 = Instance.new("TextLabel")
+local AutoArea7Farm = Instance.new("TextButton")
+local TextLabel_14 = Instance.new("TextLabel")
+local AutoArea8Farm = Instance.new("TextButton")
+local TextLabel_15 = Instance.new("TextLabel")
+local AutoArea9Farm = Instance.new("TextButton")
+local TextLabel_16 = Instance.new("TextLabel")
+local AutoArea10Farm = Instance.new("TextButton")
+local TextLabel_17 = Instance.new("TextLabel")
+local TextLabel_18 = Instance.new("TextLabel")
+local TextLabel_19 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Main1.Name = "Main 1"
+Main1.Parent = ScreenGui
+Main1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Main1.Position = UDim2.new(0.0566037744, 0, 0.0973782763, 0)
+Main1.Size = UDim2.new(0, 187, 0, 30)
+Main1.Visible = true
+Main1.Active = true
+Main1.Draggable = true
+
+TextLabel.Parent = Main1
+TextLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 152, 0, 30)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Sword Master Simulator"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+Frame1Open.Name = "Frame 1 Open"
+Frame1Open.Parent = Main1
+Frame1Open.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame1Open.BackgroundTransparency = 1.000
+Frame1Open.Position = UDim2.new(0.812834203, 0, 1.27156582e-07, 0)
+Frame1Open.Size = UDim2.new(0, 34, 0, 30)
+Frame1Open.Font = Enum.Font.SourceSans
+Frame1Open.Text = "-"
+Frame1Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Frame1Open.TextSize = 30.000
+Frame1Open.TextWrapped = true
+Frame1Open.MouseButton1Down:Connect(function()
+	if Frame1.Visible == true then
+		Frame1.Visible = false
+	else
+		if Frame1.Visible == false then
+			Frame1.Visible = true
+		end
+	end
+end)
+
+TextLabel_2.Parent = Main1
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_2.Position = UDim2.new(0, 0, 0.99999994, 0)
+TextLabel_2.Size = UDim2.new(0, 187, 0, 3)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = ""
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+Frame1.Name = "Frame 1"
+Frame1.Parent = Main1
+Frame1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame1.Position = UDim2.new(0, 0, 1.0999999, 0)
+Frame1.Size = UDim2.new(0, 187, 0, 362)
+Frame1.Visible = true
+Frame1.Active = true
+
+TextLabel_3.Parent = Frame1
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.Size = UDim2.new(0, 187, 0, 12)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Scripts"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 14.000
+
+TextLabel_4.Parent = Frame1
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_4.Position = UDim2.new(0, 0, 0.0342857093, 0)
+TextLabel_4.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Auto Collect Gems/Coins"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 14.000
+local a = false
+AutoCollectCoins.Name = "Auto Collect Coins"
+AutoCollectCoins.Parent = TextLabel_4
+AutoCollectCoins.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoCollectCoins.Position = UDim2.new(1, 0, 0, 0)
+AutoCollectCoins.Size = UDim2.new(0, 33, 0, 22)
+AutoCollectCoins.Font = Enum.Font.SourceSans
+AutoCollectCoins.Text = ""
+AutoCollectCoins.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoCollectCoins.TextSize = 14.000
+AutoCollectCoins.MouseButton1Down:Connect(function()
+	if a == false then
+		a = true
+		AutoCollectCoins.Text = "✓"
+		AutoCollectCoins.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while a  do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").FieldCurrency:GetDescendants()) do
+				if v.Name == "TouchInterest" then
+					firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Parent,1)
+					wait()
+					firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Parent,0)
+
+				end
+			end
+		end
+	else
+		a = false
+		AutoCollectCoins.Text = ""
+		AutoCollectCoins.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+
+TextLabel_5.Parent = Frame1
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_5.Position = UDim2.new(0, 0, 0.0971428528, 0)
+TextLabel_5.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Auto Sell"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 14.000
+local b = false
+AutoSell.Name = "Auto Sell"
+AutoSell.Parent = TextLabel_5
+AutoSell.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoSell.Position = UDim2.new(1, 0, 0, 0)
+AutoSell.Size = UDim2.new(0, 33, 0, 22)
+AutoSell.Font = Enum.Font.SourceSans
+AutoSell.Text = ""
+AutoSell.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoSell.TextSize = 14.000
+AutoSell.MouseButton1Down:Connect(function()
+	if b == false then
+		b = true
+		AutoSell.Text = "✓"
+		AutoSell.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while b do
+			wait()
+			game:GetService("ReplicatedStorage").Remote.SellRemote:FireServer("Sell_Land5")
+		end
+	else
+		b = false
+		AutoSell.Text = ""
+		AutoSell.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+
+CollectIslandReward.Name = "Collect Island Reward"
+CollectIslandReward.Parent = Frame1
+CollectIslandReward.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CollectIslandReward.BackgroundTransparency = 0.500
+CollectIslandReward.Position = UDim2.new(0, 0, 0.159999996, 0)
+CollectIslandReward.Size = UDim2.new(0, 186, 0, 22)
+CollectIslandReward.Font = Enum.Font.SourceSans
+CollectIslandReward.Text = "Collect Island Rewards"
+CollectIslandReward.TextColor3 = Color3.fromRGB(255, 255, 255)
+CollectIslandReward.TextSize = 14.000
+CollectIslandReward.MouseButton1Down:Connect(function()
+	game:GetService("Players").LocalPlayer.PlayerGui.WindowsGui.QuestSystem.ChestRewardRemote:FireServer("1")	
+	game:GetService("Players").LocalPlayer.PlayerGui.WindowsGui.QuestSystem.ChestRewardRemote:FireServer("2")
+	game:GetService("Players").LocalPlayer.PlayerGui.WindowsGui.QuestSystem.ChestRewardRemote:FireServer("3")
+	game:GetService("Players").LocalPlayer.PlayerGui.WindowsGui.QuestSystem.ChestRewardRemote:FireServer("4")
+	game:GetService("Players").LocalPlayer.PlayerGui.WindowsGui.QuestSystem.ChestRewardRemote:FireServer("5")
+	game:GetService("Players").LocalPlayer.PlayerGui.WindowsGui.QuestSystem.ChestRewardRemote:FireServer("6")
+	game:GetService("Players").LocalPlayer.PlayerGui.WindowsGui.QuestSystem.ChestRewardRemote:FireServer("7")
+end)
+
+TextLabel_6.Parent = Frame1
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.Position = UDim2.new(0, 0, 0.222857147, 0)
+TextLabel_6.Size = UDim2.new(0, 187, 0, 12)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Area Farms"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 14.000
+
+TextLabel_7.Parent = Frame1
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_7.Position = UDim2.new(0, 0, 0.257142842, 0)
+TextLabel_7.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "Auto Area 1 Farm"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 14.000
+local c = false
+AutoArea1Farm.Name = "Auto Area1  Farm"
+AutoArea1Farm.Parent = TextLabel_7
+AutoArea1Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea1Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea1Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea1Farm.Font = Enum.Font.SourceSans
+AutoArea1Farm.Text = ""
+AutoArea1Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea1Farm.TextSize = 14.000
+AutoArea1Farm.MouseButton1Down:Connect(function()
+	if c == false then
+		c = true
+		AutoArea1Farm.Text = "✓"
+		AutoArea1Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while c do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone1.Area1:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+				end
+			end
+		end
+	else
+		c = false
+		AutoArea1Farm.Text = ""
+		AutoArea1Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+
+TextLabel_8.Parent = Frame1
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_8.Position = UDim2.new(0, 0, 0.319999993, 0)
+TextLabel_8.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "Auto Area 2 Farm"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 14.000
+local d = false
+AutoArea2Farm.Name = "Auto Area2  Farm"
+AutoArea2Farm.Parent = TextLabel_8
+AutoArea2Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea2Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea2Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea2Farm.Font = Enum.Font.SourceSans
+AutoArea2Farm.Text = ""
+AutoArea2Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea2Farm.TextSize = 14.000
+AutoArea2Farm.MouseButton1Down:Connect(function()
+	if d == false then
+		d = true
+		AutoArea2Farm.Text = "✓"
+		AutoArea2Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while d do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone2:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+				end
+			end
+		end
+	else
+		d = false
+		AutoArea2Farm.Text = ""
+		AutoArea2Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+
+TextLabel_9.Parent = Frame1
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_9.Position = UDim2.new(0, 0, 0.382857144, 0)
+TextLabel_9.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "Auto Area 3 Farm"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextSize = 14.000
+local e = false
+AutoArea3Farm.Name = "Auto Area3 Farm"
+AutoArea3Farm.Parent = TextLabel_9
+AutoArea3Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea3Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea3Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea3Farm.Font = Enum.Font.SourceSans
+AutoArea3Farm.Text = ""
+AutoArea3Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea3Farm.TextSize = 14.000
+AutoArea3Farm.MouseButton1Down:Connect(function()
+	if e == false then
+		e = true
+		AutoArea3Farm.Text = "✓"
+		AutoArea3Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while e do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone3:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+					
+				end
+			end
+		end
+	else
+		e = false
+		AutoArea3Farm.Text = ""
+		AutoArea3Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+TextLabel_10.Parent = Frame1
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_10.Position = UDim2.new(0, 0, 0.445714295, 0)
+TextLabel_10.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = "Auto Area 4 Farm"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextSize = 14.000
+local f = false
+AutoArea4Farm.Name = "Auto Area 4 Farm"
+AutoArea4Farm.Parent = TextLabel_10
+AutoArea4Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea4Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea4Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea4Farm.Font = Enum.Font.SourceSans
+AutoArea4Farm.Text = ""
+AutoArea4Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea4Farm.TextSize = 14.000
+AutoArea4Farm.MouseButton1Down:Connect(function()
+	if f == false then
+		f = true
+		AutoArea4Farm.Text = "✓"
+		AutoArea4Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while f do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone4:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+					end
+				end
+		end
+	else
+		f = false
+		AutoArea4Farm.Text = ""
+		AutoArea4Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+			
+
+	end
+end)
+
+TextLabel_11.Parent = Frame1
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_11.Position = UDim2.new(0, 0, 0.508571446, 0)
+TextLabel_11.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = "Auto Area 5 Farm"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextSize = 14.000
+local g = false
+AutoArea5Farm.Name = "Auto Area 5 Farm"
+AutoArea5Farm.Parent = TextLabel_11
+AutoArea5Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea5Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea5Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea5Farm.Font = Enum.Font.SourceSans
+AutoArea5Farm.Text = ""
+AutoArea5Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea5Farm.TextSize = 14.000
+AutoArea5Farm.MouseButton1Down:Connect(function()
+	if g == false then
+		g = true 
+		AutoArea5Farm.Text = "✓"
+		AutoArea5Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while g do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone5:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+					end
+				end
+			end
+	else
+		g = false 
+		AutoArea5Farm.Text = ""
+		AutoArea5Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+
+		end
+
+end)
+
+TextLabel_12.Parent = Frame1
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_12.Position = UDim2.new(0, 0, 0.571428597, 0)
+TextLabel_12.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_12.Font = Enum.Font.SourceSans
+TextLabel_12.Text = "Auto Area 6 Farm"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextSize = 14.000
+local h = false
+
+AutoArea6Farm.Name = "Auto Area 6 Farm"
+AutoArea6Farm.Parent = TextLabel_12
+AutoArea6Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea6Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea6Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea6Farm.Font = Enum.Font.SourceSans
+AutoArea6Farm.Text = ""
+AutoArea6Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea6Farm.TextSize = 14.000
+AutoArea6Farm.MouseButton1Down:Connect(function()
+	if h == false then
+		h = true
+		AutoArea6Farm.Text = "✓"
+		AutoArea6Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while h do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone6:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+				end
+			end
+
+
+		end
+	else
+		h = false
+		AutoArea6Farm.Text = ""
+		AutoArea6Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+
+TextLabel_13.Parent = Frame1
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_13.Position = UDim2.new(0, 0, 0.634285748, 0)
+TextLabel_13.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_13.Font = Enum.Font.SourceSans
+TextLabel_13.Text = "Auto Area 7 Farm"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextSize = 14.000
+local o = false
+AutoArea7Farm.Name = "Auto Area 7 Farm"
+AutoArea7Farm.Parent = TextLabel_13
+AutoArea7Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea7Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea7Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea7Farm.Font = Enum.Font.SourceSans
+AutoArea7Farm.Text = ""
+AutoArea7Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea7Farm.TextSize = 14.000
+AutoArea7Farm.MouseButton1Down:Connect(function()
+	if o == false then
+		o = true
+		AutoArea7Farm.Text = "✓"
+		AutoArea7Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while o do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone7:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+				end
+			end
+
+
+		end
+	else
+		o = false
+		AutoArea7Farm.Text = ""
+		AutoArea7Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+
+TextLabel_14.Parent = Frame1
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_14.Position = UDim2.new(0, 0, 0.697142899, 0)
+TextLabel_14.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = "Auto Area 8 Farm"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextSize = 14.000
+local gr = false
+AutoArea8Farm.Name = "Auto Area 8 Farm"
+AutoArea8Farm.Parent = TextLabel_14
+AutoArea8Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea8Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea8Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea8Farm.Font = Enum.Font.SourceSans
+AutoArea8Farm.Text = ""
+AutoArea8Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea8Farm.TextSize = 14.000
+AutoArea8Farm.MouseButton1Down:Connect(function()
+	if gr == false then
+		gr = true
+		AutoArea8Farm.Text =  "✓"
+		AutoArea8Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while gr do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone8:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+					end
+			end
+
+
+		end
+	else
+		gr = false
+		AutoArea8Farm.Text = ""
+		AutoArea8Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+		
+	end)
+
+TextLabel_15.Parent = Frame1
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_15.Position = UDim2.new(0, 0, 0.76000005, 0)
+TextLabel_15.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_15.Font = Enum.Font.SourceSans
+TextLabel_15.Text = "Auto Area 9 Farm"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextSize = 14.000
+local bc = false
+AutoArea9Farm.Name = "Auto Area 9 Farm"
+AutoArea9Farm.Parent = TextLabel_15
+AutoArea9Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea9Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea9Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea9Farm.Font = Enum.Font.SourceSans
+AutoArea9Farm.Text = ""
+AutoArea9Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea9Farm.TextSize = 14.000
+AutoArea9Farm.MouseButton1Down:Connect(function()
+	if bc == false then
+		bc = true
+		AutoArea9Farm.Text = "✓"
+		AutoArea9Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while bc do
+			wait()
+
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone9:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+				end
+			end
+
+
+		end
+	else
+		bc = false
+		AutoArea9Farm.Text = ""
+		AutoArea9Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+
+TextLabel_16.Parent = Frame1
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_16.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_16.Position = UDim2.new(0, 0, 0.822857201, 0)
+TextLabel_16.Size = UDim2.new(0, 152, 0, 22)
+TextLabel_16.Font = Enum.Font.SourceSans
+TextLabel_16.Text = "Auto Area 10 Farm"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextSize = 14.000
+local cc = false
+AutoArea10Farm.Name = "Auto Area 10 Farm"
+AutoArea10Farm.Parent = TextLabel_16
+AutoArea10Farm.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AutoArea10Farm.Position = UDim2.new(1, 0, 0, 0)
+AutoArea10Farm.Size = UDim2.new(0, 33, 0, 22)
+AutoArea10Farm.Font = Enum.Font.SourceSans
+AutoArea10Farm.Text = ""
+AutoArea10Farm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoArea10Farm.TextSize = 14.000
+AutoArea10Farm.MouseButton1Down:Connect(function()
+	if cc == false then
+		cc = true
+		AutoArea10Farm.Text = "✓"
+		AutoArea10Farm.BackgroundColor3 = Color3.fromRGB(0,255,0)
+		while cc do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").BattleField.Spawn.Zone10:GetDescendants()) do
+				if v.Name == "HumanoidRootPart" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,5)
+						mouse1click()
+					
+				end
+			end
+
+
+		end
+	else
+		cc = false
+		AutoArea10Farm.Text = ""
+		AutoArea10Farm.BackgroundColor3 = Color3.fromRGB(20,20,20)
+	end
+end)
+
+TextLabel_17.Parent = Frame1
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_17.Position = UDim2.new(0, 0, 0.883078098, 0)
+TextLabel_17.Size = UDim2.new(0, 187, 0, 12)
+TextLabel_17.Font = Enum.Font.SourceSans
+TextLabel_17.Text = "Credits"
+TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.TextSize = 14.000
+
+TextLabel_18.Parent = Frame1
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_18.Position = UDim2.new(0, 0, 0.916227281, 0)
+TextLabel_18.Size = UDim2.new(0, 187, 0, 15)
+TextLabel_18.Font = Enum.Font.SourceSans
+TextLabel_18.Text = "V3rmillion:bjkefe2"
+TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.TextSize = 14.000
+
+TextLabel_19.Parent = Frame1
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_19.Position = UDim2.new(0, 0, 0.957663774, 0)
+TextLabel_19.Size = UDim2.new(0, 187, 0, 15)
+TextLabel_19.Font = Enum.Font.SourceSans
+TextLabel_19.Text = "Discord:efeeee#8151"
+TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.TextSize = 14.000
